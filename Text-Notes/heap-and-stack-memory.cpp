@@ -1,11 +1,10 @@
 // Everything below is in context with memory.
 
-// Both stack and heap memory are present in RAM only... and they grow towards one another as they get larger
+// Both stack and heap memory are present in RAM only... and they grow towards one another as they get larger when allocated by OS to the program
 // (not in cache memory or cpu registers) :: these are accessible in very low level languages like assembly language
 
-
 // stack memory:
-// used for static memory allocation (allocated at compile time)
+// used for static memory allocation (allocated only at load time (or compile time))
 // contiguous and follows LIFO (Last In First Out)
 // it is very limited in a machine, no matter the size of RAM (as allocated and managed by the OS of the machine)
 // fast access, and simple to keep track of everything, since it is managed by a stack pointer by the OS
@@ -17,6 +16,31 @@
 // size of heap is only limited by the size of RAM (and Virtual memory available) in a computer
 // can access Randomly and as needed
 // Element of the heap have no dependencies with each other and can always be accessed randomly at any time.
+
+/*
+
+Some more points:
+
+Stack:
+Variables created on the stack will go out of scope and are automatically deallocated.
+Implemented with an actual stack data structure.
+Stores local data, return addresses, used for parameter passing.
+Can have a stack overflow when too much of the stack is used (mostly from infinite or too deep recursion, very large allocations).
+Data created on the stack can be used without pointers.
+You would use the stack if you know exactly how much data you need to allocate before compile time and it is not too big.
+Usually has a maximum size already determined when your program starts.
+
+Heap:
+In C++, variables on the heap must be destroyed manually and never fall out of scope. The data is freed with delete, delete[], or free.
+Slower to allocate in comparison to variables on the stack.
+Used on demand to allocate a block of data for use by the program.
+Can have fragmentation when there are a lot of allocations and deallocations.
+In C++ or C, data created on the heap will be pointed to by pointers and allocated with new or malloc respectively.
+Can have allocation failures if too big of a buffer is requested to be allocated.
+You would use the heap if you don't know exactly how much data you will need at run time or if you need to allocate a lot of data.
+Responsible for memory leaks.
+*/
+
 
 
 // ** IMP Explanation:
