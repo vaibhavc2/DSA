@@ -13,4 +13,13 @@ GCD(a, b) == GCD(b % a, a)
 LCM:
 LCM(a, b) * gcd(a, b) = a * b
 
+Some modulo properties:
+a % m + b % m = (a+b) % m
+a % m - b % m = (a-b) % m 
+a % m * b % m = (a*b) % m
+
+TO DO
+-> Pigeonhole Principle
+-> Catalon Number
+-> Inclusion-Exclusion Principle
 */

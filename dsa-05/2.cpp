@@ -2,7 +2,8 @@
 using namespace std;
 
 // std::string
-// memory is allocated dynamically
+// memory is allocated dynamically and in contiguous manner
+// but remember: it is not derived from vectors and the implementation is quite similar
 // std::string stores its data internally in the form of a null-terminated C-string, but in normal usage does not allow you to access the null terminator, so normally there is no '\0' in std::string to use in the code 
 
 string reverseString(string rev)
