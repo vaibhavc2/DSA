@@ -4,6 +4,7 @@
 using namespace std;
 
 // template<class T>
+// template<typename T>
 class GCD_HCF
 {
 public:

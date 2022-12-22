@@ -92,7 +92,13 @@ int main(int argc, char const *argv[])
     cout << t << endl;
 
     char const* xyz = &temp;
-
+    
+    char* str1 = new char[5]; // this just allocates a block with 5 chars in heap memory and uninitialised. It doesn't automatically add a '\0' as it is not a string.
+    // So,
+    // It is Better to initialise a dynamically allocated char array with '\0' i.e. null terminator
+    char* str2 = new char[5]();
+    cout << str1 << endl; // prints random things (garbage values)
+    cout << str2 << endl; // prints nothing since it is initialised by '\0'
 
     // c_arr[2] = 'v';
     return 0;
