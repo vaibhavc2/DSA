@@ -4,12 +4,13 @@
 #include <string.h> // for C style string functions
 using namespace std;
 
-// Class: user-defined or custom data type
+// todo: REVISION
+// ? Class: user-defined or custom data type
 
-// Access modifiers:
-// private: only in that class
-// public: anywhere
-// protected: only in that class and it's inherited class
+// ! Access modifiers:
+// * private: only in that class
+// * public: anywhere
+// * protected: only in that class and it's inherited class
 
 // Using Macros
 #define FAKE_PASSWORD "@3SxLy&i94/2aH137$"
@@ -29,7 +30,7 @@ private:
 public:
     char* message;
 
-    // CONSTRUCTORS & DESTRUCTORS
+    // * CONSTRUCTORS & DESTRUCTORS
     // If we don't define Constructor and Destructor, they are automatically called using a general definition behind the scenes by the compiler.
     // But everytime, an object is created and then deleted, then the compiler calls its own implementation of Default Constructor or Default Destructor respectively
     // If we write even one implementation of a Constructor or a Destructor, then the default one called behind the scenes is unimplemented by the compiler. So by defining our own implementations of Constructors or Destructors respectively, we ignore (& overwrite for that class) the in-built implementations in the compiler
