@@ -1,2 +1,6 @@
 /.vscode
 *.exe
+# Following is to exclude all files without any extension
+*
+!/**/
+!*.*
