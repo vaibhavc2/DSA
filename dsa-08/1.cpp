@@ -19,7 +19,8 @@ class Hero
 {
 // everything is private by default if not mentioned!
 private:
-    // properties
+    // data-members
+    // also called properties/states
     int health;
     char level;
     char const* name;
@@ -104,6 +105,8 @@ public:
         delete[] message; // will delete if allocated dynamically (will work only in case of copied object, & when the custom copy constructor above will be called)
     }
     
+    // Functions
+    // also called Methods
     void setVal(int health = 100, char level = 'A')
     {
         if (health < 200 && level < 'G')

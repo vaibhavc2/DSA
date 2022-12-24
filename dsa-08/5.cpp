@@ -1,0 +1,1 @@
+// const keyword in object creation and functions
