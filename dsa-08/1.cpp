@@ -209,7 +209,12 @@ int main(int argc, char const* argv[])
     // when we pass by value, a copy of the object is created, and there also the copy constructor is called
     Hero my_hero(spiderman); // it copies all the properties of the given object to this object
     
-    // Hero my_hero = spiderman; //this also calls the copy constructor and works similarly to the above statement
+    // Hero my_hero = spiderman; //this also calls the copy constructor and works similarly to the above statement as it is creating a new object
+    
+    // Whenever a new object is created using an existing obj, copy constructor is used.
+    // But when an already created obj is being assigned the values of an existing obj, then the assignment operator is used.
+    // say, here,
+    // spiderman = batman;
 
     my_hero.printProperties();
 
