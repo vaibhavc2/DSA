@@ -6,6 +6,8 @@
 // Average case time complexity: O(pow(n,2))
 // Space complexity: O(1)
 
+// It is an adaptive algo, it takes into account those numbers already sorted in the array.
+
 void insertionSort(vector<int> &arr)
 {
     // we assume that i = 0 is sorted array and start sorting from i = 1, after that in every iteration, size of sorted array increases by 1 from left towards right.

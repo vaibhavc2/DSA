@@ -6,7 +6,15 @@
 
 #include <iostream>
 #include <math.h>
+#include <limits> //* use this since this is the c++ way of limits: use std::numeric_limits
+#include <climits> // use this if want to use C style limits: INT_MAX & INT_MIN
 
+//* use these:
+// int imin = std::numeric_limits<int>::min(); // minimum value
+// int imax = std::numeric_limits<int>::max(); // maximum value
+//* OR USE:
+#define IMIN std::numeric_limits<int>::min()
+#define IMAX std::numeric_limits<int>::max()
 using namespace std;
 
 class Solution
@@ -18,8 +26,8 @@ public:
         while (x != 0)
         {
             digit = x % 10;
-            // ans * 10 <= INT_MAX because if not then, the number will excede the limits of int. Also we can't use the same form because ans may be such that if multiplied by 10 exceeds the limit of int, but otherwise is within the limits
-            if (ans > INT_MAX / 10 || ans < INT_MIN / 10)
+            // ans * 10 <= IMAX because if not then, the number will excede the limits of int. Also we can't use the same form because ans may be such that if multiplied by 10 exceeds the limit of int, but otherwise is within the limits
+            if (ans > IMAX / 10 || ans < IMIN / 10)
             {
                 return 0;
             }
@@ -135,7 +143,7 @@ int main()
     int n;
     cout << "Enter a number: ";
     cin >> n;
-    // cout << "\nThe reverse of the given number is: " << sol.reverse(n) << endl;
+    cout << "\nThe reverse of the given number is: " << sol.reverse(n) << endl;
     // cout << "The bitwise complement of the given number is: " << sol.bitwiseComplement(n) << endl;
     if (sol.isPowerOfTwo(n))
     {

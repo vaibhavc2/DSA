@@ -13,6 +13,8 @@
 // Stable sorting algorithm doesnot change the order of same values
 // UnStable sorting changes the order of same values while sorting
 
+// It is an unadaptive algo, it doesnot take benefit of numbers already sorted in the array.
+
 void selectionSort(vector<int> &arr)
 {
     for (int i = 0; i < arr.size() - 1; i++)

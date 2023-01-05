@@ -8,6 +8,8 @@
 // Space Complexity: O(1)
 // It is a stable sorting algorithm
 
+// It is an adaptive algo, it takes into account those numbers already sorted in the array.
+
 void bubbleSort(vector<int> &arr)
 {
     // for round 1 to n-1 :: here n=size

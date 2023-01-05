@@ -100,7 +100,7 @@ void Functions::removeDuplicates(vector<int> &v)
 //         {
 //         }
 //     }
-//     // if descending order
+        // if descending order
 //     else
 //     {
 //     }
