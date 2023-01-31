@@ -7,12 +7,14 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                // additional debbugging arguments
                 "-pedantic",
                 "-std=c++17",
                 "-DDEBUG",
                 "-DLOCAL_PROJECT",
+                "-O0",
+                "-fno-omit-frame-pointer",
                 "-Wall",
+                "-Wvla",
                 "-Wextra",
                 "-Wshadow",
                 "-Wduplicated-cond",
@@ -24,13 +26,13 @@
                 "-Wshift-overflow=2",
                 "-Wcast-qual",
                 "-Wcast-align",
-                "-fsanitize=undefined",
-                "-fno-sanitize-recover",
-                "-fsanitize=address",
-                //--------------------
+                "-Wformat-signedness",
+                "-fstack-protector-all",
+                "-fsanitize=undefined,address,float-divide-by-zero,float-cast-overflow",
+                "-fno-sanitize-recover=all",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/a"
             ],
             "options": {
                 "cwd": "${fileDirname}"

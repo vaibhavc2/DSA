@@ -12,7 +12,7 @@ using namespace std;
 
 class Solution {
 public:
-    // std::string.npos() returns the value when a function fails, here std::string.find() also returns npos() value, so if it doesn't match, proceed forward, else substring not found in the given string
+    // std::string.npos returns the value (-1) when a function fails, here std::string.find() also returns (-1), so if it doesn't match, proceed forward, else substring not found in the given string
     string removeOccurrences(string s, string part)
     {
         // auto start = s.find(part);

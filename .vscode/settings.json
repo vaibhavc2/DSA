@@ -1,13 +1,20 @@
 {
     "files.associations": {
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
     },
     "code-runner.executorMap": {
         // "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         // "cpp": "cd $dir && g++ -std=c++17 -DLOCAL_PROJECT $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         // "cpp": "cd $dir && g++ -std=c++17 $fileName -o a && $dir/a",
         // "cpp": "cd $dir && g++ -std=c++17 -DLOCAL_PROJECT $fileName -o a && $dir/a",
-        "cpp": "cd $dir && g++ -pedantic -std=c++17 -std=c++17 -DDEBUG -DLOCAL_PROJECT -Wall -Wextra -Wshadow -Wduplicated-cond -Wfloat-equal -Wconversion -Wformat=2 -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -Wcast-qual -Wcast-align -fsanitize=undefined -fno-sanitize-recover -fsanitize=address $fileName -o a && $dir/a",
+        // "cpp": "cd $dir && g++ -pedantic -std=c++17 -DDEBUG -DLOCAL_PROJECT -Wall -Wextra -Wshadow -Wduplicated-cond -Wfloat-equal -Wconversion -Wformat=2 -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -Wcast-qual -Wcast-align -fsanitize=undefined -fno-sanitize-recover -fsanitize=address $fileName -o a && $dir/a",
+        "cpp": "cd $dir && g++ -pedantic -std=c++17 -O3 -DLOCAL_PROJECT -Wall -Wextra -Wshadow -Wduplicated-cond -Wfloat-equal -Wconversion -Wformat=2 -Wlogical-op -Wduplicated-cond -Wshift-overflow=2 -Wcast-qual -Wcast-align -Wvla -Wformat-signedness -fomit-frame-pointer -fstack-protector-all -fsanitize=undefined,address,float-divide-by-zero,float-cast-overflow -fno-sanitize-recover=all $fileName -o a && $dir/a",
     },
+    "C_Cpp.dimInactiveRegions": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 10,
 }

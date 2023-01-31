@@ -62,7 +62,7 @@ bool Solution::checkPalindrome2(string s) {
     return true;
 }
 
-// TO CHECK WHY THE FOLLOWING SOLUTION IS NOT ACCEPTED BY LEETCODE AND CODESTUDIO IN SOME TESTCASES, BUT HERE THE CODE PASSES ALL TESTCASES IN VSCODE!
+//* TO CHECK WHY THE FOLLOWING SOLUTION IS NOT ACCEPTED BY LEETCODE AND CODESTUDIO IN SOME TESTCASES, BUT HERE THE CODE PASSES ALL TESTCASES IN VSCODE!
 // more optimised and understable simple solution:
 bool Solution::checkPalindrome3(string s)
 {
@@ -107,10 +107,14 @@ int main(int argc, char const *argv[])
     // cout << "Adjusted string: " << str << endl;
     // cout << "Reverse of the adjusted string: " << reverseString(str) << endl;
 
-    if (Solution::checkPalindrome2(s))
+    if (Solution::checkPalindrome3(s))
     {
         cout << "This string is a palindrome!" << endl;
     }
+    string str = "vaibhav";
+    cout << str.size() << " " << str.length() << endl;
+    str.push_back('\0');
+    cout << str.size() << " " << str.length() << endl;
 
     return 0;
 }

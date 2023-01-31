@@ -126,30 +126,53 @@ public:
     //     return false;
     // }
 
-    // Most efficient implementation: O(1)
-    bool
-    isPowerOfTwo(int n)
+    //* Most efficient implementation: O(1)
+    bool isPowerOfTwo(int n)
     {
         if (n == 0)
             return false;
 
         return (ceil(log2(n)) == floor(log2(n)));
     }
+    //* in the following approaches, INT OVERFLOW may occur
+    // bool isPowerOfTwo(int x)
+    // {
+    //     /* First x in the below expression is for the case when
+    //      x is 0 */
+    //     return x && (!(x & (x - 1)));
+    // }
+    // bool isPowerofTwo(long long n)
+    // {
+    //     if (n == 0)
+    //         return 0;
+    //     if ((n & (~(n - 1))) == n)
+    //         return 1;
+    //     return 0;
+    // }
+};
+
+// Lambda expression (or function) for INPUT-OUTPUT to file
+auto fileIO = [](){
+    #ifdef LOCAL_PROJECT // or, ONLINE_JUDGE
+    freopen("INPUT.txt", "r", stdin);
+    freopen("OUTPUT.txt", "w", stdout);
+    #endif
 };
 
 int main()
 {
+    fileIO();
     Solution sol;
     int n;
-    cout << "Enter a number: ";
+    // cout << "Enter a number: ";
     cin >> n;
-    cout << "\nThe reverse of the given number is: " << sol.reverse(n) << endl;
+    // cout << "\nThe reverse of the given number is: " << sol.reverse(n) << endl;
     // cout << "The bitwise complement of the given number is: " << sol.bitwiseComplement(n) << endl;
     if (sol.isPowerOfTwo(n))
     {
         cout << "The given number is a power of two." << endl;
     }
-    else if (!(sol.isPowerOfTwo(n)))
+    else
     {
         cout << "The given number is not a power of two." << endl;
     }

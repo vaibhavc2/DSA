@@ -67,8 +67,8 @@ string Solution::reverseWords(string s)
 
 int main(int argc, char const *argv[])
 {
-    // string s = "the sky is blue";
-    string s = "  hello   world  ";
+    string s = "the sky is blue";
+    // string s = "  hello   world  ";
     for(auto e:s) cout << e;
     cout << endl;
     string str = Solution::reverseWords(s);
