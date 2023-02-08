@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 // STL Vector
@@ -29,12 +28,15 @@ int main(int argc, char const *argv[])
     // vector<int> last(v_arr); // last() is vector move constructor, it copies the input vector given to it. the newly created vector contains the exact same contents as the input vector
     vector<int> copied(v_arr); // We can use any other name as well!
 
-    for (int i : copied)
+    for (int &i : copied)
         cout << i << endl;
 
     // vector doubles it's capacity everytime it gets full and needs more...
     // basically it copies itself to a new location with double the contiguous memory bandwidth, and then removes the previous one from the memory
 
+    int mini = *(min_element(v_arr.begin(), v_arr.end()));
+    int maxi = *(max_element(v_arr.begin(), v_arr.end()));
+    cout << "MIN: " << mini << " , MAX:" << maxi << endl;
     cout << "Element at 2nd index: " << v_arr.at(2) << endl;
     cout << "First element: " << v_arr.front() << endl;
     cout << "Last element: " << v_arr.back() << endl;
